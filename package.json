@@ -1,0 +1,25 @@
+{
+  "name": "ProxyService",
+  "version": "1.0.0",
+  "description": "A controller for proxying requests created for use with HttpService in Roblox.",
+  "main": "server.js",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "crypto": "^1.0.1",
+    "http": "^0.0.1-security",
+    "http-proxy": "^1.18.1",
+    "https": "^1.0.0",
+    "url": "^0.11.3",
+    "zlib": "^1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sentanos/ProxyService.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Froast <froastj@gmail.com>",
+  "license": "MIT"
+}
