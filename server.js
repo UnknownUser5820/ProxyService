@@ -14,7 +14,6 @@ const ALLOWED_GZIP_METHODS = ['transform', 'decode', 'append'];
 const DEFAULT_PROTO = 'https';
 const DEFAULT_USERAGENT = 'Mozilla';
 
-
 const getHosts = (hosts) => {
   if (!hosts) {
     return [];
@@ -36,15 +35,14 @@ const getHosts = (hosts) => {
 };
 
 // Environment Constants
-
-const PORT = 8950;
-const ACCESS_KEY = "fs54d6f5s8efd28rtuh3" && Buffer.from("fs54d6f5s8efd28rtuh3");
-const USE_WHITELIST = "false" === 'true';
-const USE_OVERRIDE_STATUS = "true" === 'true';
-const REWRITE_ACCEPT_ENCODING = "true" === 'true';
-const APPEND_HEAD = "true" === 'true';
-const ALLOWED_HOSTS = getHosts("roblox.com,www.roblox.com,api.roblox.com,wiki.roblox.com,assetgame.roblox.com,avatar.roblox.com,groups.roblox.com,data.roblox.com,inventory.roblox.com,search.roblox.com,auth.roblox.com,avatar.roblox.com,billing.roblox.com,chat.roblox.com,develop.roblox.com,notifications.roblox.com,games.roblox.com");
-const GZIP_METHOD = "transform";
+const PORT = process.env.PORT || 80;
+const ACCESS_KEY = process.env.ACCESS_KEY && Buffer.from(process.env.ACCESS_KEY);
+const USE_WHITELIST = process.env.USE_WHITELIST === 'true';
+const USE_OVERRIDE_STATUS = process.env.USE_OVERRIDE_STATUS === 'true';
+const REWRITE_ACCEPT_ENCODING = process.env.REWRITE_ACCEPT_ENCODING === 'true';
+const APPEND_HEAD = process.env.APPEND_HEAD === 'true';
+const ALLOWED_HOSTS = getHosts(process.env.ALLOWED_HOSTS);
+const GZIP_METHOD = process.env.GZIP_METHOD;
 
 assert.ok(ACCESS_KEY, 'Missing ACCESS_KEY');
 assert.ok(ALLOWED_GZIP_METHODS.includes(GZIP_METHOD), `GZIP_METHOD must be one of the following values: ${JSON.stringify(ALLOWED_GZIP_METHODS)}`);
