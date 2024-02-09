@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A controller for proxying requests created for use with HttpService in Roblox.",
   "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "assert": "^2.1.0",
     "crypto": "^1.0.1",
