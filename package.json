@@ -4,7 +4,7 @@
   "description": "A controller for proxying requests created for use with HttpService in Roblox.",
   "main": "server.js",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "author": "",
   "license": "ISC",
